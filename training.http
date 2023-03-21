@@ -1,0 +1,53 @@
+### Find all training types
+GET http://localhost:8080/api/training
+
+### Get training by id
+GET http://localhost:8080/api/training
+
+### Create new Training
+POST http://localhost:8080/api/training
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "The most popular webinar",
+  "desc": "The webinar is our best seller.",
+  "status": "CONFIRMED",
+  "trainingType": "CONFERENCE",
+  "startDate": "2023-03-15T21:08:07.5898686",
+  "endDate": null,
+  "url": ""
+}
+
+### Update existing Training
+PUT http://localhost:8080/api/training/2
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST",
+  "desc": "MY FIRST POST.",
+  "status": "CONFIRMED",
+  "trainingType": "CONFERENCE",
+  "startDate": "2023-03-15T21:08:07.5898686",
+  "endDate": "2023-03-15T21:08:07.5898686",
+  "url": "http://localhost:8080/my-first-training-post"
+}
+
+### Update existing Training with invalid id
+PUT http://localhost:8080/api/training/99
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST",
+  "desc": "MY FIRST POST.",
+  "status": "CONFIRMED",
+  "trainingType": "CONFERENCE",
+  "startDate": "2023-03-15T21:08:07.5898686",
+  "endDate": "2023-03-15T21:08:07.5898686",
+  "url": "http://localhost:8080/my-first-training-post"
+}
+
+### Delete by id
+DELETE http://localhost:8080/api/training/2
