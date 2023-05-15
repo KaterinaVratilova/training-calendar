@@ -2,6 +2,7 @@ package com.example.trainingcalendar.controller;
 
 import com.example.trainingcalendar.model.Training;
 import com.example.trainingcalendar.repository.TrainingCollectionRepository;
+import com.example.trainingcalendar.repository.TrainingJdbcTemplateRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ public class TrainingController {
 
   private final TrainingCollectionRepository repository;
 
-  public TrainingController(TrainingCollectionRepository repository) {
+   public TrainingController(TrainingCollectionRepository repository) {
     this.repository = repository;
   }
 
